@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Education Journey</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffdde1, #ee9ca7, #a1c4fd, #c2e9fb);
+        background-size: 400% 400%;
+        animation: bgAnimate 12s infinite alternate;
+        margin: 0;
+        padding: 20px;
+    }
+
+    @keyframes bgAnimate {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        font-size: 45px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .edu-container {
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .edu-card {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: pop 0.6s ease-in-out;
+    }
+
+    @keyframes pop {
+        0% { transform: scale(0.6); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    .edu-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    .edu-card img {
+        width: 180px;
+        height: 180px;
+        border-radius: 15px;
+        object-fit: cover;
+        border: 4px solid #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .edu-card h2 {
+        margin-top: 15px;
+        color: #333;
+        font-size: 24px;
+    }
+
+    .edu-card p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    /* Buttons */
+    .button-container {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin: 10px;
+        background: #ff7eb3;
+        color: white;
+        font-weight: bold;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+        background: #ff4f95;
+        transform: scale(1.08);
+    }
+
+     footer {
+            text-align: center;
+            font-size: 15px;
+            color: #080104;
+            padding: 20px;
+        }
+
+</style>
+</head>
+
+<body>
+
+<h1>📚 My Education Journey
+     <!-- ===== Added Timeline Date, Day & Time (NO CHANGE TO ORIGINAL CODE) ===== -->
+        <p id="timeline" style="font-size:18px; font-weight:bold; margin-top:5px;"></p>
+        <p id="clock" style="font-size:18px; font-weight:bold; margin-top:5px;"></p>
+        <!-- ================================================================ -->
+</h1>
+<script>
+    // Display Current Day & Date
+    function updateDate() {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("timeline").textContent = new Date().toLocaleDateString('en-US', options);
+    }
+
+    // Display Live Clock (Time)
+    function updateClock() {
+        const now = new Date();
+        const time = now.toLocaleTimeString('en-US', { hour12: false }); // 24-hour format
+        document.getElementById("clock").textContent = time;
+    }
+
+    updateDate();
+    setInterval(updateClock, 1000); // Update every second
+</script>
+
+
+<div class="edu-container">
+<!-- ====== Education Logo Section (With Box + Description) ====== -->
+<div style="
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    text-align:center;
+">
+
+    <h2 style="color:#6c1f92; margin-bottom:15px;">Tadika Asas Pintar</h2>
+
+    <!-- Logo -->
+    <img src="asas pintar.jpg" 
+         alt="Education Logo"
+         style="width:130px; cursor:pointer; transition:0.3s;"
+         onclick="openEduImage()">
+
+    <!-- Description -->
+    <p style="
+        margin-top:15px;
+        font-size:18px;
+        color:#444;
+        line-height:1.5;
+    ">
+      This is where my journey as a student began, where this place taught me to recognize letters, read, write, count, and so on. A time when all the problems that plagued me were not yet my responsibility to think about. All that was on my mind at that time was just fun.
+    </p>
+</div>
+
+<!-- ======== POPUP IMAGE MODAL (UNCHANGED) ======== -->
+<div id="eduModal" 
+     style="
+        display:none; 
+        position:fixed; 
+        top:0; left:0; 
+        width:100%; height:100%;
+        background:rgba(0,0,0,0.7); 
+        backdrop-filter: blur(4px);
+        justify-content:center; 
+        align-items:center;
+     ">
+    <img id="eduImg" 
+         src="tadika.jpg" 
+         style="
+            max-width:80%; 
+            max-height:80%; 
+            border-radius:20px; 
+            border:6px solid white;
+         ">
+</div>
+
+<script>
+    function openEduImage(){
+        document.getElementById("eduModal").style.display = "flex";
+    }
+    document.getElementById("eduModal").onclick = function(){
+        this.style.display = "none";
+    };
+</script>
+
+
+<!-- ====== Education Logo Section (With Box + Description) ====== -->
+<div style="
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    text-align:center;
+">
+
+    <h2 style="color:#6c1f92; margin-bottom:15px;">Sekolah Kebangsaan Merbau Sempak</h2>
+
+    <!-- Logo -->
+    <img src="sk.jpg" 
+         alt="Education Logo"
+         style="width:130px; cursor:pointer; transition:0.3s;"
+         onclick="openEduImage4()">
+
+    <!-- Description -->
+    <p style="
+        margin-top:15px;
+        font-size:18px;
+        color:#444;
+        line-height:1.5;
+    ">
+        This is where I started participating in activities and building my self-confidence through various competitions. A place where I needed to be more serious and focused on finding the strengths and talents within me to highlight so that they could help and benefit me in the future.
+    </p>
+</div>
+
+<!-- ======== POPUP IMAGE MODAL (UNCHANGED) ======== -->
+<div id="eduModal4" 
+     style="
+        display:none; 
+        position:fixed; 
+        top:0; left:0; 
+        width:100%; height:100%;
+        background:rgba(0,0,0,0.7); 
+        backdrop-filter: blur(4px);
+        justify-content:center; 
+        align-items:center;
+     ">
+    <img id="eduImg4" 
+         src="rendah.jpg" 
+         style="
+            max-width:80%; 
+            max-height:80%; 
+            border-radius:20px; 
+            border:6px solid white;
+         ">
+</div>
+
+<script>
+    function openEduImage4(){
+        document.getElementById("eduModal4").style.display = "flex";
+    }
+    document.getElementById("eduModal4").onclick = function(){
+        this.style.display = "none";
+    };
+</script>
+
+<!-- ====== Education Logo Section (With Box + Description) ====== -->
+<div style="
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    text-align:center;
+">
+
+    <h2 style="color:#6c1f92; margin-bottom:15px;">Sekolah Agama Menengah Paya Jaras</h2>
+
+    <!-- Logo -->
+    <img src="sekolah.png" 
+         alt="Education Logo"
+         style="width:130px; cursor:pointer; transition:0.3s;"
+         onclick="openEduImage2()">
+
+    <!-- Description -->
+    <p style="
+        margin-top:15px;
+        font-size:18px;
+        color:#444;
+        line-height:1.5;
+    ">
+        Experience is important in shaping discipline, character and more serious academic preparation. It is necessary to reflect on oneself to find a path to more assured future success and not to forget to build sweet memories during school days.
+    </p>
+</div>
+
+<!-- ======== POPUP IMAGE MODAL (UNCHANGED) ======== -->
+<div id="eduModal2" 
+     style="
+        display:none; 
+        position:fixed; 
+        top:0; left:0; 
+        width:100%; height:100%;
+        background:rgba(0,0,0,0.7); 
+        backdrop-filter: blur(4px);
+        justify-content:center; 
+        align-items:center;
+     ">
+    <img id="eduImg2" 
+         src="menengah.jpg" 
+         style="
+            max-width:80%; 
+            max-height:80%; 
+            border-radius:20px; 
+            border:6px solid white;
+         ">
+</div>
+
+<script>
+    function openEduImage2(){
+        document.getElementById("eduModal2").style.display = "flex";
+    }
+    document.getElementById("eduModal2").onclick = function(){
+        this.style.display = "none";
+    };
+</script>
+
+<!-- ====== Education Logo Section (With Box + Description) ====== -->
+<div style="
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    text-align:center;
+">
+
+    <h2 style="color:#6c1f92; margin-bottom:15px;">Universiti Teknologi MARA, Segamat</h2>
+
+    <!-- Logo -->
+    <img src="UITM.png" 
+         alt="Education Logo"
+         style="width:130px; cursor:pointer; transition:0.3s;"
+         onclick="openEduImage3()">
+
+    <!-- Description -->
+    <p style="
+        margin-top:15px;
+        font-size:18px;
+        color:#444;
+        line-height:1.5;
+    ">
+       A challenging but fun journey. Learned a lot about life, knowledge and career. Being able to meet new people, new surroundings and all new people can give new memories that can be remembered forever. And also this meeting is a meeting with only one purpose, which is the future.
+    </p>
+</div>
+
+<!-- ======== POPUP IMAGE MODAL (UNCHANGED) ======== -->
+<div id="eduModal3" 
+     style="
+        display:none; 
+        position:fixed; 
+        top:0; left:0; 
+        width:100%; height:100%;
+        background:rgba(0,0,0,0.7); 
+        backdrop-filter: blur(4px);
+        justify-content:center; 
+        align-items:center;
+     ">
+    <img id="eduImg3" 
+         src="uni.jpg" 
+         style="
+            max-width:80%; 
+            max-height:80%; 
+            border-radius:20px; 
+            border:6px solid white;
+         ">
+</div>
+
+<script>
+    function openEduImage3(){
+        document.getElementById("eduModal3").style.display = "flex";
+    }
+    document.getElementById("eduModal3").onclick = function(){
+        this.style.display = "none";
+    };
+</script>
+
+</div>
+
+<table style="
+    width:100%;
+    border-collapse:collapse;
+    font-size:16px;
+    text-align:center;
+">
+    <tr style="background:#ff7eb3; color:white;">
+        <th style="padding:12px;">Day</th>
+        <th style="padding:12px;">Time</th>
+        <th style="padding:12px;">Subject</th>
+        <th style="padding:12px;">Lecturer</th>
+        <th style="padding:12px;">Venue</th>
+    </tr>
+
+    <!-- Monday -->
+    <tr>
+        <td style="padding:10px;">Monday</td>
+        <td style="padding:10px;">8:00 AM – 10:00 AM</td>
+        <td style="padding:10px;">IMD318 – Introduction to Web Content Management and Design</td>
+        <td style="padding:10px;">Ummu Asyikin Binti Othman</td>
+        <td style="padding:10px;">I107 (PC Maintenance)</td>
+    </tr>
+
+    <tr style="background:#f9f9f9;">
+        <td style="padding:10px;"></td>
+        <td style="padding:10px;">11:00 AM – 2:00 PM</td>
+        <td style="padding:10px;">IMD316 – Multimedia for Information Presentation</td>
+        <td style="padding:10px;">Suguna A/P Olakanathan</td>
+        <td style="padding:10px;">I210–211 TETA</td>
+    </tr>
+
+    <!-- Tuesday -->
+    <tr>
+        <td style="padding:10px;">Tuesday</td>
+        <td style="padding:10px;">10:00 AM – 1:00 PM</td>
+        <td style="padding:10px;">IMD313 – Foundation of Archives Administration</td>
+        <td style="padding:10px;">Nor Sakila Binti Asnawi<br>Nurul Syfa' Binti Mohd Tokiran</td>
+        <td style="padding:10px;">Bilik Kuliah Sri Pegaga 4</td>
+    </tr>
+
+    <tr style="background:#f9f9f9;">
+        <td style="padding:10px;"></td>
+        <td style="padding:10px;">2:00 PM – 4:00 PM</td>
+        <td style="padding:10px;">IMD317 – Outreach Programs of Information Agencies</td>
+        <td style="padding:10px;">Nurul Syfa' Binti Mohd Tokiran</td>
+        <td style="padding:10px;">SL001–002</td>
+    </tr>
+
+    <!-- Wednesday -->
+    <tr>
+        <td style="padding:10px; font-weight:bold;">Wednesday</td>
+        <td style="padding:10px;" colspan="4">FREE DAY – NO CLASS 🎉</td>
+    </tr>
+
+    <!-- Thursday -->
+    <tr style="background:#f9f9f9;">
+        <td style="padding:10px;">Thursday</td>
+        <td style="padding:10px;">11:00 AM – 12:00 PM</td>
+        <td style="padding:10px;">IMD318 – Introduction to Web Content Management and Design</td>
+        <td style="padding:10px;">Ummu Asyikin Binti Othman</td>
+        <td style="padding:10px;">Makmal Zeta</td>
+    </tr>
+
+    <!-- Friday -->
+    <tr>
+        <td style="padding:10px;">Friday</td>
+        <td style="padding:10px;">8:00 AM – 10:00 AM</td>
+        <td style="padding:10px;">IMD317 – Outreach Programs of Information Agencies</td>
+        <td style="padding:10px;">Nurul Syfa' Binti Mohd Tokiran</td>
+        <td style="padding:10px;">Big Data Lab</td>
+    </tr>
+</table>
+
+
+
+
+
+<!-- Buttons -->
+<div class="button-container">
+    <a href="index.html" class="btn">🏠 Back to Home</a>
+    <a href="biodata.html" class="btn">🧑‍💼 View Biodata</a>
+    <a href="experience.html" class="btn">💼 View Experience</a>
+</div>
+</section>
+
+
+    </div>
+
+    <footer>
+        © 2025 | Education Journey – Ikmalmattau
+    </footer>
+
+<!-- ===== BACKGROUND MUSIC SECTION (ADDED ONLY) ===== -->
+    <audio id="bgMusic" loop>
+        <source src="background music.mp4" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener("click", function () {
+            const music = document.getElementById("bgMusic");
+            if (music.paused) {
+                music.play();
+            }
+        }, { once: true });
+    </script>
+    <!-- ===== END BACKGROUND MUSIC SECTION ===== -->
+
+
+<!-- ===== LOCATION POPUP MODAL (ADDED ONLY) ===== -->
+<div id="locationModal"
+     style="
+        display:none;
+        position:fixed;
+        top:0; left:0;
+        width:100%; height:100%;
+        background:rgba(0,0,0,0.7);
+        backdrop-filter: blur(4px);
+        justify-content:center;
+        align-items:center;
+        z-index:9999;
+     ">
+    <div style="
+        background:white;
+        padding:20px;
+        border-radius:20px;
+        width:90%;
+        max-width:600px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.3);
+     ">
+        <h2 id="locationTitle" style="text-align:center; color:#6c1f92;"></h2>
+
+        <iframe 
+            id="locationMap"
+            width="100%"
+            height="350"
+            style="border-radius:15px; border:none;"
+            loading="lazy">
+        </iframe>
+
+        <p style="
+            text-align:center;
+            margin-top:15px;
+            font-weight:bold;
+            cursor:pointer;
+            color:#ff4f95;
+        "></p>
+    </div>
+</div>
+<!-- ===== END LOCATION POPUP MODAL ===== -->
+
+<script>
+    const schoolLocations = {
+        "Tadika Asas Pintar":
+            "https://www.google.com/maps?q=Tadika%20Asas%20Pintar&output=embed",
+
+        "Sekolah Kebangsaan Merbau Sempak":
+            "https://www.google.com/maps?q=Sekolah%20Kebangsaan%20Merbau%20Sempak&output=embed",
+
+        "Sekolah Agama Menengah Paya Jaras":
+            "https://www.google.com/maps?q=Sekolah%20Agama%20Menengah%20Paya%20Jaras&output=embed",
+
+        "Universiti Teknologi MARA, Segamat":
+            "https://www.google.com/maps?q=Universiti%20Teknologi%20MARA%20Segamat&output=embed"
+    };
+
+    document.querySelectorAll("h2").forEach(h2 => {
+        const schoolName = h2.textContent.trim();
+        if (schoolLocations[schoolName]) {
+            h2.style.cursor = "pointer";
+            h2.title = "Click to view location";
+            h2.onclick = function () {
+                document.getElementById("locationTitle").textContent = schoolName;
+                document.getElementById("locationMap").src = schoolLocations[schoolName];
+                document.getElementById("locationModal").style.display = "flex";
+            };
+        }
+    });
+
+    document.getElementById("locationModal").onclick = function(e){
+        if(e.target === this){
+            this.style.display = "none";
+        }
+    };
+</script>
+
+
+</body>
+</html>
+
+</body>
+</html>

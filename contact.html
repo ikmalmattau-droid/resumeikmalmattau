@@ -1,0 +1,192 @@
+<style>
+/* CONTACT SECTION */
+#contact {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ff7eb3, #65c7f7, #6a82fb);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+    text-align: center;
+    color: white;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#contact h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-desc {
+    margin-bottom: 40px;
+}
+
+/* Wrapper */
+.contact-wrapper {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.contact-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.contact-card h3 {
+    margin-bottom: 20px;
+}
+
+/* Icons Layout */
+.icon-info,
+.icon-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Icon Base */
+.icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* Icon Colors */
+.whatsapp { background: #25D366; }
+.phone    { background: #007bff; }
+.ig       { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); }
+.tt       { background: #000; }
+.fb       { background: #1877f2; }
+.x        { background: #000; }
+
+/* Hover Effect */
+.icon:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Navigation */
+.contact-nav {
+    margin-top: 45px;
+}
+
+.contact-nav a {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: white;
+    color: #6a82fb;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.contact-nav a:hover {
+    background: #ff7eb3;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 32px;
+    }
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Contacts</title>
+
+    <!-- Font Awesome (UNTUK ICON) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <h2>Let’s Connect!</h2>
+     <!-- TOP MARQUEE -->
+<div class="top-marquee">
+  <marquee behavior="scroll" direction="left" scrollamount="7">
+     <p>Reach me through my social platforms</p>
+  </marquee>
+
+    <div class="contact-wrapper">
+
+        <!-- Contact Info -->
+        <div class="contact-card">
+            <h3>Contact</h3>
+
+            <div class="icon-info">
+                <a href="https://wa.me/qr/V4CGF5X5TGT7P1" class="icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="tel:+60183679801" class="icon phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="contact-card">
+            <h3>Social Media</h3>
+
+            <div class="icon-social">
+            <a href="https://www.instagram.com/ikmalmattau?igsh=eXVrbmFzc3JhYTZ6" target="_blank"
+                data-tooltip="Instagram" data-tooltip-icon="fa-brands fa-instagram" style="font-size:50px;">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@malmattau?_r=1&_t=ZS-9202zzStge8"target="_blank"
+                data-tooltip="tiktok" data-tooltip-icon="fa-brands fa-tiktok" style="font-size:50px;">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/share/17Gw3a6Dv1/" target="_blank"
+                data-tooltip="facebook" data-tooltip-icon="fa-brands fa-facebook" style="font-size:50px;">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://x.com/Ikmalmattau" target="_blank"
+                data-tooltip="X" data-tooltip-icon="fa-brands fa-X" style="font-size:50px;">
+                <i class="fa-brands fa-X"></i>
+            </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="contact-nav">
+        <a href="index.html"> Home</a>
+    </div>
+</section>
+
+
+
+
+
+
+
+

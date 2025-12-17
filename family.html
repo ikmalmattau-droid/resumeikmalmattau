@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family</title>
+    <style>
+        body{
+            margin:0;
+            font-family:'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+            color:#f8f3f3;
+        }
+        header{
+            text-align:center;
+            padding:40px 20px;
+            color:white;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        header h1{
+            margin:0;
+            font-size:36px;
+        }
+        .Quran h1{
+         text-align: center;
+         font-size: 32px;
+         margin-bottom: 30px;
+         color: #f7f3f3;
+        }
+        header p{
+            margin-top:10px;
+            font-size:18px;
+        }
+
+        .family-section{
+            padding:50px 20px;
+            max-width:1200px;
+            margin:auto;
+        }
+        .family-section h2{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:32px;
+            color:#faf6f6;
+        }
+        .family-grid{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap:25px;
+        }
+        .family-card{
+            background:rgb(14, 13, 13);
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.15);
+            text-align:center;
+            padding:20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .family-card:hover{
+            transform: translateY(-10px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.25);
+        }
+        .family-card img{
+            width:150px;
+            height:150px;
+            object-fit:cover;
+            border-radius:50%;
+            border:5px solid #764ba2;
+            margin-bottom:15px;
+        }
+        .family-card h3{
+            margin:10px 0 5px;
+            font-size:22px;
+        }
+        .family-card p{
+            font-size:15px;
+            line-height:1.6;
+        }
+
+        .whole-family{
+            padding:60px 20px;
+            background:rgba(7, 7, 7, 0.85);
+            margin-top:60px;
+        }
+        .whole-family h2{
+            text-align:center;
+            font-size:32px;
+            margin-bottom:30px;
+        }
+        .whole-family img{
+            display:block;
+            margin:0 auto;
+            max-width:80%;
+            border-radius:25px;
+            box-shadow:0 15px 30px rgba(0,0,0,0.25);
+        }
+        .whole-family p{
+            text-align:center;
+            max-width:800px;
+            margin:25px auto 0;
+            font-size:16px;
+            line-height:1.7;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#2d2d2d;
+            color:white;
+            margin-top:60px;
+        }
+
+        .home-button{
+            display:inline-block;
+            padding:12px 30px;
+            background:#764ba2;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:bold;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+            margin-top:20px;
+        }
+        .quote{
+            text-align:center;
+            margin-top:30px;
+            font-style:italic;
+            font-size:16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== BACKGROUND VIDEO SECTION (ADDED ONLY) ===== -->
+<video autoplay muted loop id="bgVideo"
+    style="
+        position:fixed;
+        right:0;
+        bottom:0;
+        min-width:100%;
+        min-height:100%;
+        z-index:-1;
+        object-fit:cover;
+        filter:brightness(0.6);
+    ">
+    <source src="bunga.mp4" type="video/mp4">
+</video>
+<!-- ===== END BACKGROUND VIDEO SECTION ===== -->
+<header>
+    <h1>My Lovely Family ❤️</h1>
+    <p>A simple page to introduce my family members</p>
+
+</header> 
+
+<!-- Quran Section -->
+<section class="Quran">
+    <h1>Verse of the quran</h1>
+    <div class="Surah Al-Isra' verse 23"
+ <!-- TOP MARQUEE -->
+<div class="top-marquee">
+  <marquee behavior="scroll" direction="right" scrollamount="5">
+     <p>{}  وَقَضَىٰ رَبُّكَ أَلَّا تَعۡبُدُوٓاْ إِلَّآ إِيَّاهُ وَبِٱلۡوَٰلِدَيۡنِ إِحۡسَٰنًاۚ إِمَّا يَبۡلُغَنَّ عِندَكَ ٱلۡكِبَرَ أَحَدُهُمَآ أَوۡ كِلَاهُمَا فَلَا تَقُل لَّهُمَا أُفّٖ وَلَا تَنۡهَرۡهُمَا وَقُل لَّهُمَا قَوۡلٗا كَرِيمٗا ٢٣.</p>
+  </marquee>
+  
+</div>
+    <div>
+            <p><strong>"Dan Tuhanmu telah memerintahkan agar kamu jangan menyembah selain Dia dan hendaklah berbuat baik kepada ibu bapamu dengan sebaik-baiknya. Jika salah seorang di antara keduanya atau keduanya sampai berusia lanjut dalam pemeliharaanmu, maka janganlah sesekali mengatakan kepada keduanya perkataan "ah" dan janganlah engkau membentak mereka, serta ucapkanlah kepada mereka perkataan yang mulia".  (Surah Al-Isra’ ayat 23)</p></strong>
+       <div class="Surah Al-Isra' verse 23"
+    </div>
+</section>
+
+<!-- Father Section -->
+<section class="family-section">
+    <h2>👨 My Father</h2>
+    <div class="family-grid">
+        <div class="family-card">
+            <img src="walid2.jpg" alt="Father">
+            <h3>Hisamuddin bin Sulaiman (Walid)</h3>
+            <p>“My father is the quiet strength of our family. A steady presence whose sacrifices are never spoken, yet deeply felt. Behind his calm steps lies unwavering dedication, and within every moment of his tireless effort lives a hope for us to grow beyond his dreams. He shows love not through words, but through actions, becoming our protector, our guide, and the light that leads us forward. Dad was the strength of our family someone who always worked hard, sacrificed without complaint, and was the best example in my life. Fathers are the backbone of the family who always show responsibility, perseverance and love through actions, not just words. Behind my father's firmness, there is a love that never diminishes. All his efforts and sacrifices have become the greatest inspiration in my life. My father educated us with patience, discipline and sincerity, setting himself as a role model in shaping our morals and lives. Dad is not only a father, but also a protector, advisor and ever present source of strength for our family.”</p>
+        </div>
+    </div>
+</section>
+
+<!-- Mother Section -->
+<section class="family-section">
+    <h2>👩 My Mother</h2>
+    <div class="family-grid">
+        <div class="family-card">
+            <img src="ummi.jpg" alt="Mother">
+            <h3>Norsilawati binti Hassan (Ummi)</h3>
+            <p>“My mother is the quiet miracle of our home, a constant presence whose love flows gently yet endlessly through every chapter of our lives. In her soft voice lives comfort, and in her patient silence lies a strength that never fades. She gives without asking, sacrifices without counting, and loves without conditions, carrying the weight of the family with grace and unwavering devotion. Through sleepless nights, whispered prayers, and countless unseen efforts, she becomes the warmth that heals our wounds and the light that guides our steps forward. Her hands work tirelessly to hold the family together, while her heart remains a place of refuge in times of fear and uncertainty. Though her sacrifices often go unnoticed, they shape who we are, nurture our dreams, and turn an ordinary house into a home filled with love, peace, and meaning.”</p>
+        </div>
+    </div>
+</section>
+
+<!-- Dedication Section -->
+<section class="family-section">
+    <h2>Dedication to My Parents ❤️</h2>
+    <div class="family-grid">
+        <div class="family-card">
+            <p style="font-size:18px; line-height:1.8; text-align:center;">
+                To my beloved parents, thank you for your endless love, guidance, and sacrifices. You are the heart of our family and the pillars of our strength.
+                <br><br>
+                <strong>“Dan rendahkanlah dirimu terhadap mereka berdua dengan penuh kasih sayang dan ucapkanlah: ‘Wahai Tuhanku, kasihilah mereka berdua sebagaimana mereka telah mendidik aku sewaktu kecil.’ (Surah Al-Isra’: 24)”</strong>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Siblings Section -->
+<section class="family-section">
+    <h2>👦 My Brother</h2>
+    <div class="family-grid">
+        <div class="family-card">
+            <img src="along.jpg" alt="Sibling 1">
+            <h3>Muhammad Rafieq Danial Bin Hisamuddin (Along)</h3>
+            <p>“My eldest brother is a pillar of strength within our family, a guiding presence who leads with quiet responsibility and care. In his actions lie protection, and in his words lives encouragement that gives us confidence to move forward. He carries his role with maturity, often placing the needs of the family before his own, becoming both a supporter and an example to look up to. Through his patience, resilience, and silent sacrifices, he stands as a reminder that leadership is not about authority, but about love, responsibility, and unwavering support.”</p>
+        </div>
+    </div>
+</section>
+
+<section class="family-section">
+    <h2>🧑‍♂️ Me</h2>
+    <div class="family-grid">
+        <div class="family-card">
+            <img src="mamal.jpg" alt="Sibling 2">
+            <h3>Muhammad Ikmal Danial Bin Hisamuddin (Angah)</h3>
+            <p>“As the second eldest, I stand between guidance and growth,learning from those before me while leading those who follow. I carry the role of support and balance, offering strength when needed and understanding when it matters most. In this position, I grow through responsibility, shaped by family values and driven by the desire to protect, encourage, and be someone my siblings can rely on. Though my role is quiet at times, it is built on sincerity, loyalty, and a deep sense of belonging to my family.”</p>
+        </div>
+    </div>
+</section>
+
+<section class="family-section">
+    <h2>👧 My Sister</h2>
+    <div class="family-grid">
+        <div class="family-card">
+            <img src="kakak.jpg" alt="My Sister">
+            <h3>Yasmeen Awla Binti Hisamuddin (Kakak)</h3>
+            <p>“My younger sister is a gentle light within our family, bringing warmth and sincerity through her presence. In her laughter there is joy, and in her kindness there is a softness that comforts those around her. Though she walks with quiet steps, her heart is full of strength, resilience, and dreams waiting to bloom. She reminds us that gentleness is not weakness, but a beautiful strength that brings balance, love, and harmony into our family.”</p>
+        </div>
+    </div>
+</section>
+
+<section class="family-section">
+    <h2>👧 My Younger Sister</h2>
+    <div class="family-grid">
+        <div class="family-card">
+            <img src="adik.jpg" alt="My Younger Sister">
+            <h3>Yasmeen Humaira Binti Hisamuddin (Adik)</h3>
+            <p>“My youngest sister is the precious joy of our family, a gentle blessing whose innocence brings light to every corner of our home. In her smiles live pure happiness, and in her small steps grow hopes for a beautiful future. She is a reminder of new beginnings, teaching us patience, tenderness, and unconditional love. Though she is the youngest, her presence completes our family, filling our days with laughter, warmth, and a quiet happiness that words can hardly describe.”</p>
+        </div>
+    </div>
+</section>
+
+<!-- Whole Family Section -->
+<section class="whole-family">
+    <h2>My Whole Family 👨‍👩‍👧‍👦</h2>
+    <img src="keluarga.jpg" alt="Whole Family Photo" style="width: 350px;height: 150;">
+    <p>“Our family is the heart that beats in unison, a tapestry of love, strength, and shared memories. Each member carries a unique light a guiding hand, a comforting smile, a voice of wisdom, or a silent support and together we create a harmony that feels like home. Through laughter and tears, through challenges and triumphs, we learn, grow, and lean on one another. Every sacrifice, every word of encouragement, every act of care binds us closer, reminding us that family is not only about blood, but about love, trust, and unwavering devotion. In their presence, we find courage in their guidance, we find direction and in their hearts, we find an endless well of warmth that nurtures our dreams and strengthens our spirits. Truly, our family is a treasure, a sanctuary, and the greatest gift we are ever blessed to share.”</p>
+    <div style="text-align:center;">
+        <a href="index.html" class="home-button">⬅ Back to Home</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 My Family | Created with ❤️</p>
+</footer>
+<!-- ===== BACKGROUND MUSIC SECTION (ADDED ONLY) ===== -->
+<audio id="bgMusic" loop>
+    <source src="ghost.mp4" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    document.addEventListener("click", function () {
+        const music = document.getElementById("bgMusic");
+        if (music.paused) {
+            music.play();
+        }
+    }, { once: true });
+</script>
+<!-- ===== END BACKGROUND MUSIC SECTION ===== -->
+
+</body>
+</html>
